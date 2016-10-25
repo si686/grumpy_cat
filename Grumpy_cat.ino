@@ -46,12 +46,12 @@ void loop() {
     ledOFF();
     tailSLOW(); //call upon slow tail movement
   }
-  else if (fsrReading > 100 && fsrReading < 500) {
+  else if (fsrReading > 100 && fsrReading < 200) {
     Serial.println(" - Perfect Pressure");
     ledOFF(); //call upon ledOFF function
     tailMED();
   }
-  else if (fsrReading >= 500) {
+  else if (fsrReading >= 200) {
     Serial.println(" - TOO MUCH");
     ledON();
     tailFAST();
